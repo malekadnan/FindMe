@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ForgetFragment">
+
+    <RadioGroup
+        android:id="@+id/forget_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dim2"
+        android:paddingTop="@dimen/dim6"
+        android:orientation="vertical">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/forget_by_email"
+            android:theme="@style/RadioButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restore_by_email"
+            android:checked="true"
+            android:textSize="@dimen/font2"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/forget_by_phone"
+            android:theme="@style/RadioButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restore_by_phone"
+            android:textSize="@dimen/font2"/>
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dim2"
+        android:paddingTop="@dimen/dim6"
+        android:paddingEnd="@dimen/dim2">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/forget_input_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/restore_enter_email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dim6"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/forget_submet_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textColor="@color/textColor"
+            android:layout_marginEnd="@dimen/dim6" />
+        <Button
+            android:id="@+id/forget_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="@color/textColor"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dim2"
+        android:paddingEnd="@dimen/dim2"
+        android:paddingTop="@dimen/dim3">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/forget_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forget_hint_email_txt"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font2"
+            android:paddingLeft="@dimen/dim2"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

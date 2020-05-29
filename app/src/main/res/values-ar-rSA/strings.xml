@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">أبحث عني</string>
+
+    <!-- General Strings-->
+    <string name="login">تسجيل الدخول</string>
+    <string name="cancel">إلغاء الأمر</string>
+    <string name="submit">إرسال</string>
+    <string name="signup">مستخدم جديد</string>
+    <string name="next">التالي</string>
+    <string name="done">تم</string>
+    <string name="ok">موافق</string>
+
+    <!-- Strings for Login Fragment -->
+    <string name="login_user_name">اسم المستخدم</string>
+    <string name="login_password">كلمة المرور</string>
+    <string name="login_forget">هل نسيت كلمة السر</string>
+
+    <!-- Strings for Forget Fragment -->
+    <string name="restore_by_email">استرجاع بواسطة الإيميل</string>
+    <string name="restore_by_phone">استرجاع بواسطة الموبايل</string>
+    <string name="restore_enter_email">ادخل الإيميل المسجل</string>
+    <string name="restore_enter_phone">أدخل رقم الموبايل المسجل</string>
+    <string name="forget_hint_email_txt">إذا كان الإيميل الذي أدخلته صحيحا ومسجلا لديناو ستتلقى كلمة المرور على إيميلك </string>
+    <string name="forget_hint_phone_txt">إذا كان رقم موبايلك صحيحا ومسجلا لدينا ستتلقى رسالة على جهازك تحوي كلمة المرور</string>
+
+    <!-- Strings for ٍSign Up Fragment -->
+    <string name="signup_email">ادخل البريد الالكتروني</string>
+    <string name="signup_phone">ادخل رقم الموبايل</string>
+    <string name="signup_name">ادخل اسمك</string>
+    <string name="signup_pass">ادخل كلمة المرور</string>
+    <string name="signup_repass">اعد ادخال كلمة المرور</string>
+    <string name="signup_job">سجل كصاحب مهنة؟</string>
+    <string name="signup_avilabilty">هذا البريد الالكتروني/ الموبايل مستخدم مسبقا</string>
+
+
+</resources>

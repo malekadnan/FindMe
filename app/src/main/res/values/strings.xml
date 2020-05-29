@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Find Me</string>
+
+    <!-- General Strings-->
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="signup">Sign Up</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="ok">Ok</string>
+
+    <!-- Strings for Login Fragment -->
+    <string name="login_user_name">Enter user name</string>
+    <string name="login_password">Enter password</string>
+    <string name="login_forget">Are you forget your password?</string>
+
+    <!-- Strings for Forget Fragment -->
+    <string name="restore_by_email">Restore by email</string>
+    <string name="restore_by_phone">Restore by phone</string>
+    <string name="restore_enter_email">Enter your email</string>
+    <string name="restore_enter_phone">Enter your phone number</string>
+    <string name="forget_hint_email_txt">If your email is correct and already registered, you will recieve your password on the email</string>
+    <string name="forget_hint_phone_txt">If your mobile number is correct and already registered, you will recieve password on your phone</string>
+
+    <!-- Strings for ٍSign Up Fragment -->
+    <string name="signup_email">Enter your email</string>
+    <string name="signup_phone">Enter your phone</string>
+    <string name="signup_name">Enter your name</string>
+    <string name="signup_pass">Enter your password</string>
+    <string name="signup_repass">Re-enter your password</string>
+    <string name="signup_job">Register as job owner?</string>
+    <string name="signup_avilabilty">This email/phone is used, you are already regiester</string>
+
+
+
+
+</resources>
