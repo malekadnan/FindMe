@@ -14,10 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView mainImage;
     MainFragment mainFragment;
-    LoginFragment loginFragment;
-    ForgetFragment forgetFragment;
-    SignupFragmment signupFragmment;
-    UserInfoFragment userInfoFragment;
+
     FragmentManager fm;
     FragmentTransaction ft;
 
@@ -28,12 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         fm = getSupportFragmentManager();
         ft = fm.beginTransaction();
+
         mainFragment = new MainFragment();
-        loginFragment = new LoginFragment();
-        forgetFragment = new ForgetFragment();
-        signupFragmment = new SignupFragmment();
-        userInfoFragment = new UserInfoFragment();
-        ft.replace(R.id.layout_fragment,userInfoFragment);
+
+        ft.replace(R.id.layout_fragment,mainFragment);
         ft.commit();
 
         mainImage = findViewById(R.id.main_title);
@@ -46,5 +41,4 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
 }
