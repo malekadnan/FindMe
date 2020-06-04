@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.android.material.checkbox.MaterialCheckBox;
+import com.google.android.material.textfield.TextInputEditText;
 
 
 /**
@@ -15,14 +19,18 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class UserInfoFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    TextInputEditText nameTxt, passTxt, repassTxt;
+    Button doneBtn, cancelBtn;
+    MaterialCheckBox isProfCheck;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public UserInfoFragment() {
         // Required empty public constructor
@@ -58,7 +66,52 @@ public class UserInfoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_user_info, container, false);
+
+
+
+        final Bundle bundle = this.getArguments();
+
+        nameTxt = view.findViewById(R.id.userinfo_name_txt);
+        passTxt = view.findViewById(R.id.userinfo_pass_txt);
+        repassTxt = view.findViewById(R.id.userinfo_repass_txt);
+        doneBtn = view.findViewById(R.id.userinfo_done_btn);
+        cancelBtn = view.findViewById(R.id.userinfo_cancel_btn);
+        isProfCheck = view.findViewById(R.id.userinfo_is_job_owner);
+
+
+
+        doneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String  name,email, phone, pass, repass;
+                email = bundle.getString("email");
+                phone = bundle.getString("phone");
+                name = nameTxt.getText().toString();
+                pass = passTxt.getText().toString();
+                repass = repassTxt.getText().toString();
+
+                if(name.equals("")){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_missing_name));
+                } else if(name.length() < 5){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_wrong_name));
+                } else if (pass.equals("")){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_missing_pass));
+                } else if (pass.length() < 5){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_wrong_pass));
+                } else if (!repass.matches(pass)) {
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_wrong_repass));
+                } else {
+                    Utility.showToast(getActivity(),"OK");
+
+
+                }
+            }
+        });
+
+
+
+        return view;
     }
 }

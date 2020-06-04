@@ -15,6 +15,9 @@
     <string name="login_user_name">اسم المستخدم</string>
     <string name="login_password">كلمة المرور</string>
     <string name="login_forget">هل نسيت كلمة السر</string>
+    <string name="login_missing_user_name">اسم المستخدم لا يمكن أن يكون فارغا</string>
+    <string name="login_missing_password">كلمة المرور لا يمكن أن تكون فارغة</string>
+    <string name="login_wrong_login">اسم مستخدم أو كلمة مرور خاطئ</string>
 
     <!-- Strings for Forget Fragment -->
     <string name="restore_by_email">استرجاع بواسطة الإيميل</string>
@@ -32,6 +35,15 @@
     <string name="signup_repass">اعد ادخال كلمة المرور</string>
     <string name="signup_job">سجل كصاحب مهنة؟</string>
     <string name="signup_avilabilty">هذا البريد الالكتروني/ الموبايل مستخدم مسبقا</string>
+    <string name="signup_missing_email">الإيميل لا يمكن تركه فارغ</string>
+    <string name="signup_missing_phone">الهاتف لا يمكن تركه فارغ</string>
+    <string name="signup_wrong_email">صيغة الإيميل غير صحيحة</string>
+    <string name="signup_wrong_phone">صيغة الهاتف غير صحيحة</string>
+    <string name="signup_missing_name">الاسم لا يمكن ان يكون فارغ</string>
+    <string name="signup_wrong_name">الاسم يجب أن يكون على الأقل خمس أحرف</string>
+    <string name="signup_missing_pass">كلمة المرور لا يمكن ان تكون فارغة</string>
+    <string name="signup_wrong_pass">كلمة المرور يجب أن تتكون على الأقل من خمس خانات</string>
+    <string name="signup_wrong_repass">كلمة المرور غير متطابقة مع الإعادة</string>
 
 
 </resources>

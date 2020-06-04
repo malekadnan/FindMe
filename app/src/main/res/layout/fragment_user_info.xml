@@ -53,6 +53,7 @@
         android:paddingStart="@dimen/dim2"
         android:paddingEnd="@dimen/dim2">
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/userinfo_is_job_owner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font2"

@@ -14,6 +14,9 @@
     <string name="login_user_name">Enter user name</string>
     <string name="login_password">Enter password</string>
     <string name="login_forget">Are you forget your password?</string>
+    <string name="login_missing_user_name">User name can not be empty</string>
+    <string name="login_missing_password">Password can not be empty</string>
+    <string name="login_wrong_login">Invalid user name or password</string>
 
     <!-- Strings for Forget Fragment -->
     <string name="restore_by_email">Restore by email</string>
@@ -31,6 +34,15 @@
     <string name="signup_repass">Re-enter your password</string>
     <string name="signup_job">Register as job owner?</string>
     <string name="signup_avilabilty">This email/phone is used, you are already regiester</string>
+    <string name="signup_missing_email">Email can not be empty</string>
+    <string name="signup_missing_phone">Phone can not be empty</string>
+    <string name="signup_wrong_email">Email format is not valid</string>
+    <string name="signup_wrong_phone">Phone format is not valid</string>
+    <string name="signup_missing_name">Name can not be empty</string>
+    <string name="signup_wrong_name">Name must be at least five characters</string>
+    <string name="signup_missing_pass">Password can not be empty</string>
+    <string name="signup_wrong_pass">Password must be at least five digits</string>
+    <string name="signup_wrong_repass">Password and Re-password are not matching</string>
 
 
 

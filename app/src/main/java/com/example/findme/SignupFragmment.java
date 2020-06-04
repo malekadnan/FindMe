@@ -59,9 +59,31 @@ public class SignupFragmment extends Fragment {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new UserInfoFragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                Utility.loadFragment(fragmentManager, fragment);
+                String email = emailTxt.getText().toString();
+                String phone = phoneTxt.getText().toString();
+
+                if(email.equals("")){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_missing_email));
+                } else if(!Utility.isValidEmail(email)){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_wrong_email));
+                } else if (phone.equals("")){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_missing_phone));
+                } else if (phone.length()!=10){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.signup_wrong_phone));
+                } else {
+                    Utility.showToast(getActivity(),"OK");
+                    Fragment fragment = new UserInfoFragment();
+                    //Fragment fragment = new Fragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("email", email);
+                    bundle.putString("phone", phone);
+                    fragment.setArguments(bundle);
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    Utility.loadFragment(fragmentManager, fragment);
+                }
+
+
+
             }
         });
 

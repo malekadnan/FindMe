@@ -1,6 +1,5 @@
 package com.example.findme;
 
-
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.fragment.app.Fragment;
@@ -9,8 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import com.google.android.material.textfield.TextInputEditText;
+import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginFragment extends Fragment {
 
@@ -58,10 +58,45 @@ public class LoginFragment extends Fragment {
         cancelBtn = view.findViewById(R.id.login_cancel_btn);
         forgetTxt = view.findViewById(R.id.login_forget_txt);
         signupTxt = view.findViewById(R.id.login_signup_txt);
+        //String emptyPass = getResources().getString(R.string.login_missing_password);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String type = "login";
+                String userName = loginTxt.getText().toString();
+                String password = passTxt.getText().toString();
+
+                if (userName.equals("")){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.login_missing_user_name));
+                } else if (password.equals("")){
+                    Utility.showToast(getActivity(),getResources().getString(R.string.login_missing_password));
+                }
+                else {
+                    BackgroundConnection bk = new BackgroundConnection(getActivity());
+                    bk.execute(type, userName, password);
+                    if(!Parameters.getIsLogin()){
+                        Utility.showToast(getActivity(),getResources().getString(R.string.login_wrong_login));
+                    }
+                }
+
+
+
+                /*if (!userName.isEmpty()){
+                    if (!password.isEmpty()){
+                        BackgroundConnection bk = new BackgroundConnection(getActivity());
+                        bk.execute(type, userName, password);
+                    } else {
+                        Toast.makeText( getActivity(), "User name can not be empty", Toast.LENGTH_SHORT).show();
+                         //Toast.makeText( getActivity(), getResources().getString(R.string.login_missing_password), Toast.LENGTH_SHORT).show();
+                } }else {
+                    Toast.makeText(getActivity(), "User name can not be empty", Toast.LENGTH_SHORT).show();
+                }*/
+
+
+
+
+
                 //Fragment fragment = new LoginFragment();
                 //FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 //Utility.loadFragment(fragmentManager, fragment);
